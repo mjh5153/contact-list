@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ContactsService } from './contacts.service';
+import { Observable } from 'rxjs';
+import { contact } from './contact.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contact-list';
+  contacts$: Observable<contact[]>;
+
+  constructor(private contactsService: ContactsService) {
+
+  }
+  ngOnInit () {
+    this.contacts$ = this.contactsService.getContacts();
+  }
 }

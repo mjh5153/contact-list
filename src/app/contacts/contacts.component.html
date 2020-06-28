@@ -1,0 +1,31 @@
+<div>
+    <input type="hidden" #selection>
+    <button class="contact-button" (click)="addContact()">Add Contact</button>
+    <div class="flex-container">
+        <div class="card-container">
+            <div *ngFor="let contact of contacts" class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+                <span>{{contact.firstName}} {{contact.lastName}}</span>
+            </div>
+        </div>
+        <div>
+        <!--!!!make form hide and show with contact button
+            add form controls and field validation
+        -->
+            <span>First Name <input matInput type="text"/></span>
+            
+            <span>Last Name <input matInput type="text"/></span>
+            
+            <!-- <div>
+                <span></span><input matInput type="text"/>
+            </div>
+            <input matInput type="text"/>
+            <input matInput type="text"/>
+            <input matInput type="text"/>
+            <input matInput type="text"/>
+            <input matInput type="text"/> -->
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</div>

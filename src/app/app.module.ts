@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
