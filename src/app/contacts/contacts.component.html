@@ -7,25 +7,25 @@
                 <span>{{contact.firstName}} {{contact.lastName}}</span>
             </div>
         </div>
-        <div>
-        <!--!!!make form hide and show with contact button
-            add form controls and field validation
-        -->
-            <span>First Name <input matInput type="text"/></span>
+        <form class="form-container" *ngIf="showForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+            <!--!!!make form hide and show with contact button
+                add form controls and field validation
+            -->
+            <div class="flex-form">
+                <div><label>First Name</label><input matInput type="text" formControlName="firstName"/></div>
             
-            <span>Last Name <input matInput type="text"/></span>
+                <div><label>Last Name</label><input matInput type="text" formControlName="lastName"/></div>
             
-            <!-- <div>
-                <span></span><input matInput type="text"/>
+                <div><label>Company</label><input matInput type="text" formControlName="company"/></div>
+            
+                <div><label>Email</label><input matInput type="text" formControlName="email"/></div>
+            
+                <div><label>Phone</label><input matInput type="text" formControlName="phone"/></div>
+            
+                <div><label>Address</label><input matInput type="text" formControlName="address"/></div>
+                <div style="width:348px;"><button class="submit-button" type="submit" [disabled]="!contactForm.valid">Submit</button></div>
             </div>
-            <input matInput type="text"/>
-            <input matInput type="text"/>
-            <input matInput type="text"/>
-            <input matInput type="text"/>
-            <input matInput type="text"/> -->
-        </div>
-        <div>
-            
-        </div>
+        </form>
     </div>
 </div>
