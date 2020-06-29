@@ -2,9 +2,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Component, Input } from '@angular/core';
-import { ContactsService } from './contacts.service';
+import { ContactsService } from './core/contacts.service';
 import { of } from 'rxjs';
-import { contact } from './contact.model';
+import { contact } from './shared/contact.model';
 
 describe('AppComponent', () => {
   let fixture;

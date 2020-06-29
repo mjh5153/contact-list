@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ContactsService } from './contacts.service';
+import { ContactsService } from './core/contacts.service';
 import { Observable } from 'rxjs';
-import { contact } from './contact.model';
+import { contact } from './shared/contact.model';
 
 @Component({
   selector: 'app-root',

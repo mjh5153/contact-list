@@ -122,6 +122,10 @@ div:nth-child(2):not(.card) form div * {
     line-height: 36px;   
 }
 
+.flex-form > div > button:disabled {
+    color: #aaa;
+}
+
 .buttonWidth {
     width:348px;
 }
@@ -139,6 +143,7 @@ div:nth-child(2):not(.card) form div {
     color: #42A948;
     margin-bottom: 5px;
 }
+
 
 
 

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactsComponent } from './contacts.component';
 import { FormBuilder, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
-import { contact } from '../contact.model';
+import { contact } from '../shared/contact.model';
 import { By } from '@angular/platform-browser';
 
 describe('ContactsComponent', () => {

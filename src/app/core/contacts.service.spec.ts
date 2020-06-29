@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { ContactsService } from './contacts.service';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { of, defer } from 'rxjs';
-import { contact } from './contact.model';
+import { contact } from '../shared/contact.model';
 
 describe('ContactsService', () => {
   function asyncData<T>(data: T) {
