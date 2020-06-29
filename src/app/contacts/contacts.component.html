@@ -8,23 +8,62 @@
             </div>
         </div>
         <form class="form-container" *ngIf="showForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-
-            <!--!!!make form hide and show with contact button
-                add form controls and field validation
-            -->
             <div class="flex-form">
-                <div><label>First Name</label><input matInput type="text" formControlName="firstName"/></div>
+                <div class="success" *ngIf="showSuccessMessage">
+                    Contact form successfully added!
+                </div>
+                <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="firstName.errors.required">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="lastName.errors.required">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div *ngIf="company.invalid && (company.dirty || company.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="company.errors.required">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="email.errors.email">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="phone.errors.required">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div *ngIf="address.invalid && (address.dirty || address.touched)"
+                        class="alert alert-danger">
+                    <div class="error" *ngIf="address.errors.required">
+                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                    </div>
+                </div>
+                <div><label>First Name</label><input matInput type="text" formControlName="firstName" required autofocus/></div>
             
-                <div><label>Last Name</label><input matInput type="text" formControlName="lastName"/></div>
+                <div><label>Last Name</label><input matInput type="text" formControlName="lastName" required/></div>
             
-                <div><label>Company</label><input matInput type="text" formControlName="company"/></div>
+                <div><label>Company</label><input matInput type="text" formControlName="company" required/></div>
             
-                <div><label>Email</label><input matInput type="text" formControlName="email"/></div>
+                <div><label>Email</label><input matInput type="text" formControlName="email" required/></div>
             
-                <div><label>Phone</label><input matInput type="text" formControlName="phone"/></div>
+                <div><label>Phone</label><input matInput type="text" formControlName="phone" required/></div>
             
-                <div><label>Address</label><input matInput type="text" formControlName="address"/></div>
-                <div style="width:348px;"><button class="submit-button" type="submit" [disabled]="!contactForm.valid">Submit</button></div>
+                <div>
+                    <label>Address</label>
+                    <input matInput type="text" formControlName="address" required/>
+                </div>
+                <div class="buttonWidth"><button class="submit-button" type="submit" 
+                    [disabled]="contactForm.invalid">Submit</button></div>
             </div>
         </form>
     </div>

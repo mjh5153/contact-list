@@ -9,7 +9,7 @@ import { contact } from './contact.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'contact-list';
+  title = 'Contacts';
   contacts$: Observable<contact[]>;
 
   constructor(private contactsService: ContactsService) {
