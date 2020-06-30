@@ -15,37 +15,37 @@
                 <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="firstName.errors.required">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter values in the first name <strong>&nbsp;required&nbsp;</strong> field
                     </div>
                 </div>
                 <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="lastName.errors.required">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter values in the last name <strong>&nbsp;required&nbsp;</strong> field
                     </div>
                 </div>
                 <div *ngIf="company.invalid && (company.dirty || company.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="company.errors.required">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter values in the company <strong>&nbsp;required&nbsp;</strong> field
                     </div>
                 </div>
                 <div *ngIf="email.invalid && (email.dirty || email.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="email.errors.email">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter correct values in the email <strong>&nbsp;required&nbsp;</strong> field
                     </div>
                 </div>
                 <div *ngIf="phone.invalid && (phone.dirty || phone.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="phone.errors.required">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter values in the phone <strong>&nbsp;required&nbsp;</strong> field
                     </div>
                 </div>
                 <div *ngIf="address.invalid && (address.dirty || address.touched)"
                         class="alert alert-danger">
                     <div class="error" *ngIf="address.errors.required">
-                        Please enter values in <strong>&nbsp;required&nbsp;</strong> fields
+                        Please enter values in the address <strong>&nbsp;required&nbsp;</strong> field 
                     </div>
                 </div>
                 <div><label>First Name</label><input matInput type="text" formControlName="firstName" required autofocus/></div>
